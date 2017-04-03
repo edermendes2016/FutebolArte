@@ -1,0 +1,80 @@
+﻿@model appfutebol.Dominio.Tabela
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Tabela</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Clube.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clube.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pontos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pontos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GolFeito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GolFeito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GolSofrido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GolSofrido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataInclusao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataInclusao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Excluido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Excluido)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
