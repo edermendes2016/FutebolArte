@@ -56,7 +56,7 @@ namespace appfutebol.Site.Controllers
             if (tecnico.Clube.GF>tecnico.Clube.GS)
             {
                 tecnico.Clube.Pontos += 3;
-                tecnico.Salario = (double.Parse(tecnico.Salario) + (double.Parse(tecnico.Salario) * 0.05)).ToString();
+                tecnico.Salario = Math.Round(tecnico.Salario + (tecnico.Salario * 0.05), 2);
                 _repTecnico.Atualizar(tecnico);
             }          
 

@@ -51,7 +51,7 @@ namespace appfutebol.Site.Controllers
         {
             Jogador jogador = _RepositorioJogador.ObterPorId(id);
             jogador.GolFeitos += 5;
-            jogador.Salario = (double.Parse(jogador.Salario) + (double.Parse(jogador.Salario) * 0.1)).ToString();
+            jogador.Salario = Math.Round(jogador.Salario+(jogador.Salario * 0.1), 2);
             _RepositorioJogador.Atualizar(jogador);
             return View(jogador);
         }

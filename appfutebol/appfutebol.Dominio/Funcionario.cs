@@ -9,7 +9,8 @@ namespace appfutebol.Dominio
     public class Funcionario : DominioBase
     {
         public  string Nome { get;  set; }
-        public  string Salario { get; set; }
+        
+        public  double Salario { get; set; }
         public  DateTime InicioContrato { get;  set; }
         public  DateTime FinalContrato { get;  set; }
         
