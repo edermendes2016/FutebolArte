@@ -14,14 +14,14 @@ namespace appfutebol.Dominio
             
        }
 
-        public  string Posicao { get; set; }
+        public  string Posicao { get;  set; }
         public  int GolFeitos { get; set; }
-        public Guid? chvClube { get; set; }
+        public Guid? chvClube { get;  set; }
         [ForeignKey("chvClube")]
-        public virtual Clube Clube { get; set; }
-        public Guid? chvJogo { get; set; } 
+        public virtual Clube Clube { get;  set; }
+        public Guid? chvJogo { get;  set; } 
         [ForeignKey("chvJogo")]
-        public virtual Jogo Jogo { get; set; } 
+        public virtual Jogo Jogo { get;  set; } 
 
 
 

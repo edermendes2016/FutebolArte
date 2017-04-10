@@ -13,9 +13,9 @@ namespace appfutebol.Dominio
        {
            Id = Guid.NewGuid();
        }
-        public Guid Id { get; set; }
-        public DateTime DataInclusao { get; set; }
-        public bool Ativo { get; set; }
-        public bool Excluido { get; set; }
+        public Guid Id { get;  set; }
+        public DateTime DataInclusao { get;  set; }
+        public bool Ativo { get;  set; }
+        public bool Excluido { get;  set; }
     }
 }
