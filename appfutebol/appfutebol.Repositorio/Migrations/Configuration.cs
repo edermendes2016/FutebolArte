@@ -1,5 +1,6 @@
 namespace appfutebol.Repositorio.Migrations
 {
+    using Infraestrutura;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -10,6 +11,13 @@ namespace appfutebol.Repositorio.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+        }
+        public class SchoolDBInitializer : CreateDatabaseIfNotExists<FutebolContext>
+        {
+            protected override void Seed(FutebolContext context)
+            {
+                base.Seed(context);
+            }
         }
 
     }

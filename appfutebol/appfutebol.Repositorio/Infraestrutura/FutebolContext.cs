@@ -23,6 +23,7 @@ namespace appfutebol.Repositorio.Infraestrutura
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            Database.SetInitializer<FutebolContext>(new CreateDatabaseIfNotExists<FutebolContext>());
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
