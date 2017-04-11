@@ -13,7 +13,7 @@ namespace appfutebol.Site.Controllers
 {
     public class TecnicoController : Controller
     {
-
+        private FutebolContext db = new FutebolContext();
         public readonly RepositorioClube _RepositorioClube;
         private readonly RepositorioTecnico _repTecnico;
 
@@ -44,7 +44,25 @@ namespace appfutebol.Site.Controllers
             }
             return View(tecnico);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Details(Guid id)
 
+        {
+            
+            Tecnico tecnico = _repTecnico.ObterPorId(id);
+            var clube = tecnico.Clube.Id = tecnico.chvtecClube.Value;
+
+            if (tecnico.Clube.GF>tecnico.Clube.GS)
+            {
+                tecnico.Clube.Pontos += 3;
+                tecnico.Salario = Math.Round(tecnico.Salario + (tecnico.Salario * 0.05), 2);
+                _repTecnico.Atualizar(tecnico);
+            }          
+
+
+            return View(tecnico);
+        }
         // GET: Tecnico/Create
         public ActionResult Create()
         {

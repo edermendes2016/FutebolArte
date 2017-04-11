@@ -45,6 +45,16 @@ namespace appfutebol.Site.Controllers
             return View(jogador);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Details(Guid id)
+        {
+            Jogador jogador = _RepositorioJogador.ObterPorId(id);
+            jogador.GolFeitos += 5;
+            jogador.Salario = Math.Round(jogador.Salario+(jogador.Salario * 0.1), 2);
+            _RepositorioJogador.Atualizar(jogador);
+            return View(jogador);
+        }
         // GET: Jogador/Create
         public ActionResult Create()
         {

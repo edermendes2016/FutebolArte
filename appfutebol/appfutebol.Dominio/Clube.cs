@@ -18,8 +18,10 @@ namespace appfutebol.Dominio
 
         public  string Nome { get; set; }
         public  string Sigla { get; set; }
-        public ICollection<Tabela> Tabelas { get; set; }
-        public ICollection<Jogador> Jogadores { get; set; }
-        public ICollection<Tecnico> Tecnicos { get; set; }
+        public int GF { get; set; }
+        public int GS { get; set; }
+        public int Pontos { get; set; }
+        public ICollection<Jogador> Jogadores { get;  set; }
+        public ICollection<Tecnico> Tecnicos { get;  set; }
     }
 }

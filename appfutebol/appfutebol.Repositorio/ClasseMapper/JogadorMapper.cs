@@ -13,9 +13,8 @@ namespace appfutebol.Repositorio.ClasseMapper
             Property(j => j.FinalContrato).IsRequired();
             Property(j => j.Nome).IsRequired()
                .HasMaxLength(100);
-            Property(j => j.Salario).IsRequired()
-               .HasMaxLength(16);
-
+            Property(j => j.Salario).IsRequired();
+             
        
         }
     }

@@ -5,64 +5,56 @@
 }
 
 <h2>Details</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
 
-<div>
-    <h4>Tecnico</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Clube.Nome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Clube.Nome)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Apelido)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Apelido)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Salario)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Salario)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.InicioContrato)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.InicioContrato)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.FinalContrato)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FinalContrato)
-        </dd>
-
-      
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+  
+        <div>
+            <h4>Tecnico</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Clube.Nome)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Clube.Nome)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Apelido)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Apelido)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Salario)
+                </dt>
+                <dd>    
+                    @Html.DisplayFor(model => model.Salario)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.InicioContrato)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.InicioContrato)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.FinalContrato)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.FinalContrato)
+                </dd>
+            </dl>
+            <button class="btn-info col-md-offset-2" type="submit">Atualizar Salario</button>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+}
