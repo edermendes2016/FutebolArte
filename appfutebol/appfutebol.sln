@@ -3,12 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Dominio", "2 - Dominio", "{7E4EA97C-9D0C-44BD-9B8D-9055524162E0}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Repositorio", "3 - Repositorio", "{9B9BA778-DF56-4E9C-A6FF-016FC5031D59}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Site", "1 - Site", "{B021B03D-6F67-480C-A9AE-8310161B3587}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "appfutebol.Dominio", "appfutebol.Dominio\appfutebol.Dominio.csproj", "{3D3BE324-A918-42B3-9C6C-8700E7FCAF53}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "appfutebol.Repositorio", "appfutebol.Repositorio\appfutebol.Repositorio.csproj", "{0B652D37-573C-424B-817D-4F04CF7C1951}"
@@ -36,10 +30,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{3D3BE324-A918-42B3-9C6C-8700E7FCAF53} = {7E4EA97C-9D0C-44BD-9B8D-9055524162E0}
-		{0B652D37-573C-424B-817D-4F04CF7C1951} = {9B9BA778-DF56-4E9C-A6FF-016FC5031D59}
-		{0A6EF163-6CE5-4C38-A306-0C4983EA3C48} = {B021B03D-6F67-480C-A9AE-8310161B3587}
 	EndGlobalSection
 EndGlobal
