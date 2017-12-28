@@ -11,12 +11,12 @@ namespace appfutebol.Repositorio.Infraestrutura
         public RepositorioClube() : base(new FutebolContext()) 
         {
         }
-        public IEnumerable<Clube> ObterAtivos()
+        public IList<Clube> ObterAtivos()
         {
             var sql = "SELECT c.Id as 'Id', c.* FROM Clube c where Ativo = 1";
-            //throw new Exception("THE TRETA HAS BEEN PLANTED!!!!");
+           
 
-            return Db.Database.Connection.Query<Clube>(sql);
+            return Db.Database.Connection.Query<Clube>(sql).ToList();
         }
         public override Clube Adicionar(Clube entidade)
         {

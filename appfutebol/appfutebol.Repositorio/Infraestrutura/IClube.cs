@@ -6,6 +6,6 @@ namespace appfutebol.Repositorio.Infraestrutura
     public interface IClube : IRepositorio<Clube>
     {
         Clube ObterNome(string nome);
-        IEnumerable<Clube> ObterAtivos();
+        IList<Clube> ObterAtivos();
     }
 }
