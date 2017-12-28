@@ -26,7 +26,17 @@ namespace appfutebol.Site.Controllers
         // GET: Clube
         public ActionResult Index()
         {
-            return View(_RepositorioClube.ObterAtivos());
+            if(_RepositorioClube.ObterAtivos() != null)
+            {
+                return View(_RepositorioClube.ObterAtivos());
+            }
+            return View();
+        }
+
+        public JsonResult GetClubeData()
+        {
+                var data = _RepositorioClube.ObterAtivos();
+                return new JsonResult { Data = data, JsonRequestBehavior = JsonRequestBehavior.AllowGet };           
         }
 
         // GET: Clube/Details/5
